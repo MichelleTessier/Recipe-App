@@ -25,9 +25,11 @@ static NSString *cellID = @"cellID";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     cell.textLabel.text = [RARecipes titleAtIndex:indexPath.row ];
+    cell.textLabel.textColor = [UIColor purpleColor];
     cell.detailTextLabel.text = [RARecipes descriptionAtIndex:indexPath.row];
-  
-    cell.detailTextLabel.font  =  [ UIFont fontWithName: @"Courier" size: 12.0 ];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:16.0];
+    cell.detailTextLabel.font  =  [UIFont fontWithName: @"Helvetica" size: 12.0];
+    
     return cell;
 }
 
